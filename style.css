@@ -1,0 +1,120 @@
+/* <!-- Date.-21st Feb 2022:Front page of a Website using HTML & CSS only. --> */
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Poppins',sans-serif;
+}
+.container{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(
+ rgba(5,0,136,0.5),rgba(5,0,136,0.5)),
+ url('images/background.png');
+    background-size: cover;
+    overflow: hidden;
+}
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 8%;
+    transition: background 1s;
+}
+nav .logo{
+    display: flex;
+    align-items: center;
+    font-size: 35px;
+    padding-right: 20px;
+    font-weight: 600;
+    color:yellow;
+    box-shadow:0px 0px 20px 10px bisque ;
+}
+nav .logo img{
+    width: 50px;
+    height: 50px;
+    margin-left: 20px;
+    border: 1px solid black;
+    padding: 2px 2px;
+    border-radius: 50px;
+    margin-right: 20px;
+    /* box-shadow:0px 0px 20px 10px beige ; */
+}
+nav ul li{
+    display: inline-block;
+    list-style:none ;
+    margin: 10px 20px;
+}
+nav ul li a{
+    color:yellow;
+    text-decoration: none;
+    padding: 1px 2px 1px 2px;
+    margin: 1px 2px 1px 2px;
+    font-weight: 500;
+    box-shadow:0px 0px 20px 10px beige ;
+}
+nav:hover{
+    background-color: yellow;
+}
+nav:hover ul li a{
+    color: black;
+    border-bottom: 2px solid black;
+    /* text-shadow: 0px 0px 10px red; */
+}
+nav:hover .logo{
+    color:red;
+    box-shadow:0px 0px 20px 10px grey ;
+}
+.content{
+    margin-top: 5%;
+    margin-left: 12%;
+    color:white;
+}
+.content h1{
+    font-size: 100px;
+    line-height: 120px;
+    font-weight: 600;
+    color: bisque;
+}
+.content p{
+    max-width: 500px;
+    line-height: 20px;
+    opacity: 0;
+    /* text-align: center; */
+}
+.links{
+    margin-top: 10px;
+    opacity: 0;
+    /* margin-left: 100px; */
+}
+.links a{
+    color:antiquewhite;
+    text-decoration: none;
+    display: inline-block;
+}
+.btn{
+    border: 2px solid white;
+    padding: 10px 25px;
+    border-radius: 20px;
+    margin-right: 10px;
+}
+.slide-left{
+    animation: slideleft 1s linear forwards;
+}
+@keyframes slideleft {
+    0%{
+        transform: translate(100px);
+        opacity: 0;
+    } 
+    100%{
+        transform: translate(0px);
+        opacity: 1;
+    }
+}
+p.slide-left{
+    animation-delay: 1s;
+}
+.links.slide-left{
+    animation-delay: 2s;
+}
